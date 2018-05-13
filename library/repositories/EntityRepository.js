@@ -15,7 +15,7 @@ class EntityRepository {
 
     async create({ attributes }) {
         try {
-            
+
             var [record] = await this._database(this._entityName).insert(
                 attributes,
                 '*'
@@ -65,11 +65,11 @@ class EntityRepository {
 
     async updateById(id, body) {
         try {
-           
+
             const [ent] = await this._database(this._entityName)
-                .update(body,'*')
+                .update(body, '*')
                 .where({ id });
- 
+
             return ent;
         } catch (error) {
             throw error;
