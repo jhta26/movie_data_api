@@ -1,0 +1,30 @@
+{
+  "name": "movie_site_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "boom": "^7.2.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^22.4.3",
+    "jsonwebtoken": "^8.2.1",
+    "jwt-decode": "^2.2.0",
+    "knex": "^0.14.6",
+    "mock-knex": "^0.4.0",
+    "morgan": "^1.9.0",
+    "node-mocks-http": "^1.5.8",
+    "pg": "^7.4.1"
+  }
+}
