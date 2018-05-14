@@ -38,10 +38,20 @@ class EntityRepository {
 
     async findByUserId(id) {
         try {
-            const allMeetups = await this._database(this._entityName)
+            const data = await this._database(this._entityName)
                 .where('user_id', id);
 
-            return allMeetups;
+            return data;
+        } catch (error) {
+            throw error;
+        }
+    }
+    async findByMovieId(id) {
+        try {
+            const data = await this._database(this._entityName)
+                .where('movie_id', id);
+
+            return data;
         } catch (error) {
             throw error;
         }
