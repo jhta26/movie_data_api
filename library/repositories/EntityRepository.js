@@ -36,11 +36,9 @@ class EntityRepository {
         }
     }
 
-    async findAllInvolvedMeetups(id) {
+    async findByUserId(id) {
         try {
             const allMeetups = await this._database(this._entityName)
-                .from('meetups')
-                .innerJoin('participants', 'participants.meetup_id', 'meetups.id')
                 .where('user_id', id);
 
             return allMeetups;
