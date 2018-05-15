@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const favoritesController = require('../lib/instances/favoritesController');
+const favoritesController = require('../library/instances/favorites/favoritesController');
 
 router.post('/users/:user_id(\\d+)/favorites', favoritesController.postByUsersId);
 router.get('./users/:user_id(\\d+)/favorites', favoritesController.getByUsersId)

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ratingsController = require('../lib/instances/ratingsController');
+const ratingsController = require('../library/instances/ratings/ratingsController');
 
 router.post('/users/:user_id(\\d+)/ratings', ratingsController.postByUsersId);
 router.get('./users/:user_id(\\d+)/ratings', ratingsController.getByUsersId)

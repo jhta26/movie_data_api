@@ -13,6 +13,7 @@ exports.up = function(knex) {
             .notNullable()
             .index()
         table.string('gender').notNullable().defaultTo('');
+        table.string('content').notNullable().defaultTo('');
         table.string('state').notNullable().defaultTo('');
         table.string('country').notNullable().defaultTo('');
         table.integer('age').notNullable()

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const authenticationController = require('../lib/instances/authenticationController');
+const authenticationController = require('../library/instances/authentication/authenticationController');
 
 router.post('/authenticate', authenticationController.authentication);
 router.all('/authenticate', (req, res, next) => {
