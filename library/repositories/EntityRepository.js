@@ -36,7 +36,7 @@ class EntityRepository {
         }
     }
 
-    async findByUserId(id) {
+    async getByUserId(id) {
         try {
             const data = await this._database(this._entityName)
                 .where('user_id', id);

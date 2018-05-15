@@ -4,20 +4,12 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 const jwt = require('express-jwt');
-var socketio = require('socket.io');
 const app = express();
 var http = require('http')
 var server = http.Server(app);
 const port = process.env.PORT || 8000;
 const db = require('./knex');
 
-
-
-websocket.on('connection', (socket) => {
-    socket.on('userJoined',(meetupId)=>onJoinedMeetup(meetupId,socket))
-    socket.on('location', (location,userId) => onLocationReceived(location, socket,userId));
-    
-});
 
 
 app.use(bodyParser.json());
@@ -43,12 +35,14 @@ app.use((req, res, next) => {
 
 
 const authentication = require('./routes/authentication');
-const participants = require('./routes/participants');
-const meetups = require('./routes/meetups');
+const favorites = require('./routes/favorites');
+const reviews = require('./routes/reviews');
+const ratings = require('./routes/ratings');
 const users = require('./routes/users');
 
-app.use(participants);
-app.use(meetups);
+app.use(ratings);
+app.use(favorites);
+app.use(reviews);
 app.use(users);
 app.use(authentication);
 app.all('*', (req, res, next) => res.sendStatus(404));

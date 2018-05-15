@@ -1,4 +1,4 @@
-const UsersService = require('../services/UsersService');
+const UsersService = require('../../services/UsersService');
 const UsersRepository = require('./usersRepository');
 const UsersValidator = require('./usersValidator');
 
