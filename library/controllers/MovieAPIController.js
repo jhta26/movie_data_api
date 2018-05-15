@@ -1,4 +1,4 @@
-export default class MovieAPIController {
+class MovieAPIController {
     constructor() {
 
     }
@@ -14,4 +14,4 @@ export default class MovieAPIController {
     }
 }
 
-
+module.exports = MovieAPIController
