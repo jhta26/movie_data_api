@@ -1,6 +1,6 @@
-const AuthenticationService = require('../services/AuthenticationService');
-const usersRepository = require('./usersRepository');
-const { JWT_KEY } = require('../../env');
+const AuthenticationService = require('../../services/AuthenticationService');
+const usersRepository = require('../users/usersRepository');
+const { JWT_KEY } = require('../../../env');
 
 const authenticationService = new AuthenticationService({
   JWT_KEY,
