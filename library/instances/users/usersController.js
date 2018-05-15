@@ -1,4 +1,4 @@
-const EntityController = require('../controllers/EntityController');
+const EntityController = require('../../controllers/EntityController');
 const UsersService = require('./usersService');
 
 usersController = new EntityController({

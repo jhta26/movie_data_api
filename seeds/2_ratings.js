@@ -1,7 +1,7 @@
 exports.seed = function(knex, Promise) {
     return knex('ratings').del().then(function() {
         // Inserts seed entries
-        return knex('users').insert([{
+        return knex('ratings').insert([{
                 user_id: 1,
                 movie_id: 299536,
                 rating:2,

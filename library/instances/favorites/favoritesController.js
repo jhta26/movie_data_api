@@ -1,8 +1,8 @@
-const EntityController = require('../controllers/EntityController');
+const EntityController = require('../../controllers/EntityController');
 const FavoritesService = require('./favoritesService');
-const UsersService = require('./usersService');
+const UsersService = require('../users/usersService');
 
-module.exports = new FavoritesController({
+module.exports = new EntityController({
   favoritesService: FavoritesService,
   usersService: UsersService
 });

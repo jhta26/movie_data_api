@@ -91,3 +91,4 @@ class FavoritesService {
     }
   }
 }
+module.exports = FavoritesService

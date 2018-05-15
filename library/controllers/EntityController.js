@@ -42,6 +42,28 @@ class EntityController {
             res.status(500).send('System Error');
         }
     }
+    async postByUsersId(req, res, next) {
+        try {
+        
+            const users = await this._usersService.getById(
+                req.params.user_id,
+                req.authenticatedUserId
+            );
+           
+            const data = await this._entityService.postByUserId(
+                req.body,
+                users.id
+            );
+            
+            res.json(data);
+        } catch (error) {
+            if (error.message == 'NO_PERMISSION')
+                return res.status(403).send('no permission');
+            if (error.message == 'ADMIN_ONLY')
+                return res.status(403).send('only admin has privileges');
+            res.status(500).send('System Error');
+        }
+    }
     async getAll(req, res, next) {
         try {
             const entities = await this._entityService.getAll(

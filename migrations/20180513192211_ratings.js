@@ -7,6 +7,7 @@ exports.up = function(knex) {
             .references('id')
             .inTable('users')
             .index()
+            .unsigned()
             .onDelete('CASCADE');
         table
             .integer('movie_id')

@@ -1,8 +1,8 @@
-const EntityController = require('../controllers/EntityController');
+const EntityController = require('../../controllers/EntityController');
 const ReviewsService = require('./reviewsService');
-const UsersService = require('./usersService');
+const UsersService = require('../users/usersService');
 
-module.exports = new ReviewsController({
+module.exports = new EntityController({
   reviewsService: ReviewsService,
   usersService: UsersService
 });

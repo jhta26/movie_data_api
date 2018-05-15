@@ -92,4 +92,4 @@ class RatingsService {
   }
 }
 
-module.exports = ratingsService;
+module.exports = RatingsService;

@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
                 state: 'CA',
                 country: 'USA',
                 reviews: JSON.stringify([]),
-                ratings: JSON.stringify(1]),
+                ratings: JSON.stringify([1]),
                 favorites: JSON.stringify([]),
                 hashed_password: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
 
