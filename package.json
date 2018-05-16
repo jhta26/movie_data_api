@@ -27,6 +27,7 @@
     "knex": "^0.14.6",
     "mock-knex": "^0.4.0",
     "morgan": "^1.9.0",
+    "no-cors-proxy": "^1.0.4",
     "node-mocks-http": "^1.5.8",
     "pg": "^7.4.1",
     "yup": "^0.24.1"

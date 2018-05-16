@@ -10,8 +10,6 @@ var server = http.Server(app);
 const port = process.env.PORT || 8000;
 const db = require('./knex');
 
-
-
 app.use(bodyParser.json());
 
 app.use(
@@ -30,7 +28,10 @@ app.use((req, res, next) => {
         Number.isFinite(authUserId) && authUserId > 0 ? authUserId : null;
     next();
 });
-
+app.use(function(req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    return next();
+});
 
 
 
