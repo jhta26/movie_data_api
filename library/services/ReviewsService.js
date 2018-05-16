@@ -21,10 +21,10 @@ class ReviewsService {
   }
   async getById(id, authenticatedUserId) {
     try {
-      const user = await this._usersRepository.getById(id)
-      if(this.user.id!==authenticatedUserId){
-        throw error
-      }
+      // const user = await this._usersRepository.getById(id)
+      // if(this.user.id!==authenticatedUserId){
+      //   throw error
+      // }
       const reviews = await this._reviewsRepository.getById(id);
       return reviews;
     } catch (error) {

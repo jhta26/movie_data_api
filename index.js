@@ -39,7 +39,9 @@ const favorites = require('./routes/favorites');
 const reviews = require('./routes/reviews');
 const ratings = require('./routes/ratings');
 const users = require('./routes/users');
+const movieAPI = require('./routes/movieAPI')
 
+app.use(movieAPI)
 app.use(ratings);
 app.use(favorites);
 app.use(reviews);

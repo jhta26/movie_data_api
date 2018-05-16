@@ -21,10 +21,8 @@ class RatingsService {
   }
   async getById(id, authenticatedUserId) {
     try {
-      const user = await this._usersRepository.getById(id)
-      if(this.user.id!==authenticatedUserId){
-        throw error
-      }
+      // const user = await this._usersRepository.getById(id)
+
       const ratings = await this._ratingsRepository.getById(id);
       return ratings;
     } catch (error) {

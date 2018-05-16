@@ -27,6 +27,7 @@ class EntityController {
     }
     async getByUsersId(req, res, next) {
         try {
+         
             const users = await this._usersService.getById(
                 req.params.user_id,
                 req.authenticatedUserId
@@ -65,6 +66,7 @@ class EntityController {
         }
     }
     async getAll(req, res, next) {
+      
         try {
             const entities = await this._entityService.getAll(
                 req.authenticatedUserId
@@ -80,6 +82,7 @@ class EntityController {
     }
     async getById(req, res, next) {
         try {
+
             const entity = await this._entityService.getById(
                 req.params.id,
                 req.authenticatedUserId
