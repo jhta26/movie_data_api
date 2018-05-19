@@ -5,6 +5,7 @@ const movieAPIController = require('../library/instances/movieAPI/movieAPIContro
 router.get('/movieapi/:search', movieAPIController.getMovieInfoTMDB)
 router.get('/popular',movieAPIController.getPopularMovies)
 router.get('/upcoming',movieAPIController.getUpcomingMovies)
+router.get('/nowplaying',movieAPIController.getNowPlayingMovies)
 router.all('/users/:user_id(\\d+)/ratings', (req, res, next) => {
   res.status(405).send('Method Not Allowed');
 });
